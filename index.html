@@ -525,7 +525,7 @@ body {
         `;
         stage.appendChild(balloon);
         setTimeout(() => balloon.remove(), (parseFloat(rise) + 1) * 1000);
-      }, i * 600);
+      }, i * 280);
     }
   }
 
@@ -533,7 +533,7 @@ body {
   function spawnPetals() {
     const container = document.getElementById('petals');
     const emojis = ['🌸','🌺','❤️','💖','💗','🌹','💓'];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
       setTimeout(() => {
         const p = document.createElement('div');
         p.className = 'petal';
@@ -548,7 +548,7 @@ body {
         `;
         container.appendChild(p);
         setTimeout(() => p.remove(), (parseFloat(fallDuration) + .5) * 1000);
-      }, i * 250);
+      }, i * 280);
     }
   }
 
