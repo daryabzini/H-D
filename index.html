@@ -33,7 +33,7 @@ body {
 /* ── stars ── */
 .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
 .star {
-  position: absolute; border-radius: 50%; background: white;
+  position: absolute; border-radius: 50%; background: rgb(255, 255, 255);
   animation: twinkle var(--d,3s) infinite alternate ease-in-out;
   opacity: 0;
 }
@@ -250,11 +250,11 @@ body {
   color:var(--rose); font-size:1.4rem; opacity:.7;
 }
 .poetry-title {
-  font-family:'Playfair Display',serif; font-size:1.55rem; font-style:italic;
+  font-family:'Playfair Display',serif; font-size:1.60rem; font-style:italic;
   color:var(--blush); margin-bottom:1.6rem;
   text-shadow:0 0 20px rgba(232,33,78,.5);
 }
-.poetry-verse { font-size:0.78rem; line-height:2; color:rgba(255,220,230,.88); font-style:italic; font-weight:300; }
+.poetry-verse { font-size:0.78rem; line-height:2; color:rgba(255,220,230,.88); font-style:normal; font-weight:300; }
 .poetry-verse p { margin-bottom:.9rem; }
 .poetry-verse em { color:var(--blush); font-style:normal; }
 .divider { width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--rose),transparent); margin:1.4rem auto; }
@@ -272,9 +272,9 @@ body {
 .love-signature {
   margin-top: 1.4rem;
   font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
+  font-size: 1.40rem;
   font-style: italic;
-  letter-spacing: .08em;
+  letter-spacing: .07em;
   color: rgba(180, 50, 85, 0.72);
   text-shadow:
     0 0 18px rgba(232,33,78,.35),
@@ -282,7 +282,23 @@ body {
   animation: sigBreath 3s ease-in-out infinite;
 }
 @keyframes sigBreath {
-  0%,100% { opacity: .65; text-shadow: 0 0 18px rgba(232,33,78,.3),  0 0 6px rgba(139,10,46,.4); }
+  0%,100% { opacity: .65; text-shadow: 0 0 20px rgba(232,33,78,.3),  0 0 8px rgba(139,10,46,.4); }
+  50%      { opacity: .95; text-shadow: 0 0 28px rgba(232,33,78,.55), 0 0 10px rgba(232,33,78,.3); }
+}
+.love-signature2 {
+  margin-top: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.00rem;
+  font-style: italic;
+  letter-spacing: .05em;
+  color: rgba(180, 50, 85, 0.72);
+  text-shadow:
+    0 0 18px rgba(232,33,78,.35),
+    0 0  6px rgba(139,10,46,.5);
+  animation: sigBreath 3s ease-in-out infinite;
+}
+@keyframes sigBreath {
+  0%,100% { opacity: .65; text-shadow: 0 0 20px rgba(232,33,78,.3),  0 0 8px rgba(139,10,46,.4); }
   50%      { opacity: .95; text-shadow: 0 0 28px rgba(232,33,78,.55), 0 0 10px rgba(232,33,78,.3); }
 }
 
@@ -320,11 +336,11 @@ body {
 <div id="petals"></div>
 
 <div class="page">
-  <h1 class="title">For my sweet heart Hevii…</h1>
+  <h1 class="title">For my sweetheart Hevii…</h1>
   <div class="btn-wrap">
     <div class="btn-glow-ring"></div>
     <button class="love-btn" id="loveBtn" onclick="launchLove(event)">
-      💕 Click for the surprise 💕
+      Made with love 💌💕
     </button>
   </div>
 </div>
@@ -335,7 +351,7 @@ body {
   <svg id="countdown-svg" width="44" height="44" viewBox="0 0 44 44">
     <circle cx="22" cy="22" r="18" fill="none" stroke="rgba(232,33,78,.25)" stroke-width="3"/>
     <circle id="countdown-circle" cx="22" cy="22" r="18"
-      fill="none" stroke="#e8214e" stroke-width="3"
+      fill="none" stroke="#e8214e" stroke-width="5"
       stroke-linecap="round"/>
   </svg>
   <span id="countdown-num">10s</span>
@@ -389,6 +405,7 @@ body {
         filter: drop-shadow(0 0 14px rgba(232,33,78,.45));
       "
     />
+    <p class="love-signature2">-I could get lost in those eyes forever🌙😍-<p>
   </div>
 </div>
 
@@ -494,7 +511,7 @@ body {
   /* ── balloons ── */
   function launchBalloons() {
     const stage = document.getElementById('stage');
-    const total = 20;
+    const total = 18;
 
     for (let i = 0; i < total; i++) {
       setTimeout(() => {
@@ -532,8 +549,8 @@ body {
   /* ── petals ── */
   function spawnPetals() {
     const container = document.getElementById('petals');
-    const emojis = ['🌸','❤️','💖','😍','💓'];
-    for (let i = 0; i < 16; i++) {
+    const emojis = ['💌','❤️','💖','😍','💓'];
+    for (let i = 0; i < 14; i++) {
       setTimeout(() => {
         const p = document.createElement('div');
         p.className = 'petal';
