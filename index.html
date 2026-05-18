@@ -511,7 +511,7 @@ body {
   /* ── balloons ── */
   function launchBalloons() {
     const stage = document.getElementById('stage');
-    const total = 25;
+    const total = 40;
 
     for (let i = 0; i < total; i++) {
       setTimeout(() => {
@@ -542,7 +542,7 @@ body {
         `;
         stage.appendChild(balloon);
         setTimeout(() => balloon.remove(), (parseFloat(rise) + 1) * 1000);
-      }, i * 800);
+      }, i * 750);
     }
   }
 
@@ -550,7 +550,7 @@ body {
   function spawnPetals() {
     const container = document.getElementById('petals');
     const emojis = ['💌','❤️','💖','😍'];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 14; i++) {
       setTimeout(() => {
         const p = document.createElement('div');
         p.className = 'petal';
@@ -565,7 +565,7 @@ body {
         `;
         container.appendChild(p);
         setTimeout(() => p.remove(), (parseFloat(fallDuration) + .5) * 1000);
-      }, i * 400);
+      }, i * 600);
     }
   }
 
