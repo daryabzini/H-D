@@ -511,7 +511,7 @@ body {
   /* ── balloons ── */
   function launchBalloons() {
     const stage = document.getElementById('stage');
-    const total = 10;
+    const total = 12;
 
     for (let i = 0; i < total; i++) {
       setTimeout(() => {
@@ -549,8 +549,8 @@ body {
   /* ── petals ── */
   function spawnPetals() {
     const container = document.getElementById('petals');
-    const emojis = ['💌','❤️','💖','😍','💓'];
-    for (let i = 0; i < 12; i++) {
+    const emojis = ['💌','❤️','💖','😍'];
+    for (let i = 0; i < 10; i++) {
       setTimeout(() => {
         const p = document.createElement('div');
         p.className = 'petal';
