@@ -459,7 +459,7 @@ body {
         font-weight="700"
         font-size="36"
         fill="rgba(255,255,255,0.92)"
-        style="filter:drop-shadow(0 0 4px rgba(255,255,255,0.5))">H</text>
+        style="filter:drop-shadow(0 0 12px rgba(232,33,78,0.7))">H</text>
     </svg>`;
   }
 
@@ -511,7 +511,7 @@ body {
   /* ── balloons ── */
   function launchBalloons() {
     const stage = document.getElementById('stage');
-    const total = 12;
+    const total = 14;
 
     for (let i = 0; i < total; i++) {
       setTimeout(() => {
@@ -565,7 +565,7 @@ body {
         `;
         container.appendChild(p);
         setTimeout(() => p.remove(), (parseFloat(fallDuration) + .5) * 1000);
-      }, i * 280);
+      }, i * 350);
     }
   }
 
